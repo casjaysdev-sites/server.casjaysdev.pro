@@ -3,7 +3,7 @@ layout: page
 title: Blog
 permalink: /blog/
 description: Blog Posts
-weight: 1
+weight: 99
 ---
 
 <div class="posts">
@@ -11,8 +11,8 @@ weight: 1
   <br />
   <div class="post">
     <div class="post-title">
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-title"
-        style="font-size: 30px;">{{ post.title | upcase }}</a><br>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-title" style="font-size: 30px;">{{ post.title |
+        upcase }}</a><br>
     </div>
     <p>
       <br />
@@ -28,11 +28,11 @@ weight: 1
     <br />
     <br />
     <span class="post-date">
-      Posted by <a
-        href="{{ post.url | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</a>
+      Posted by <a href="{{ post.url | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{
+        site.author.name }}{% endif %}</a>
       <br>on {{ post.date | date: '%B %d, %Y @ %H:%M' }}
-    <br />
-    <br />
+      <br />
+      <br />
       <div class="post-more"><br>
         {% if site.disqus %}
         <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"> <i class="fa fa-comments"
@@ -42,8 +42,8 @@ weight: 1
           more</a>
       </div>
   </div>
-    <br />
-    <br />
+  <br />
+  <br />
   <hr />
   {% endfor %}
 </div>
